@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11760" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xY2-ic-nuX">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11755"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AutoResizing_Practice" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kDr-3y-IvH" userLabel="뷰 A">
+                                <rect key="frame" x="16" y="42" width="161" height="278.5"/>
+                                <color key="backgroundColor" red="0.2188855438" green="0.27012880049999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2yr-Jy-T8M" userLabel="뷰 B">
+                                <rect key="frame" x="198" y="42" width="161" height="278.5"/>
+                                <color key="backgroundColor" red="1" green="0.28616071606012228" blue="0.7102367941046952" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mYs-zH-95Z" userLabel="뷰 C">
+                                <rect key="frame" x="16" y="340.5" width="343" height="278.5"/>
+                                <color key="backgroundColor" red="0.59765974150000001" green="0.95316590310000004" blue="0.42677536290000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mYs-zH-95Z" secondAttribute="bottom" constant="48" id="4xm-mk-fts"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="kDr-3y-IvH" secondAttribute="leading" id="DCZ-UJ-zuR"/>
+                            <constraint firstItem="2yr-Jy-T8M" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="22" id="KgZ-gn-U4j"/>
+                            <constraint firstItem="mYs-zH-95Z" firstAttribute="top" secondItem="kDr-3y-IvH" secondAttribute="bottom" constant="20" id="OG5-1J-Qqa"/>
+                            <constraint firstItem="kDr-3y-IvH" firstAttribute="height" secondItem="2yr-Jy-T8M" secondAttribute="height" id="T7R-OK-j88"/>
+                            <constraint firstItem="2yr-Jy-T8M" firstAttribute="leading" secondItem="kDr-3y-IvH" secondAttribute="trailing" constant="21" id="XS0-Q9-gTc"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="mYs-zH-95Z" secondAttribute="leading" id="aLP-Kc-iMI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2yr-Jy-T8M" secondAttribute="trailing" id="fcW-Tf-gnS"/>
+                            <constraint firstItem="kDr-3y-IvH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="22" id="lfQ-FL-frr"/>
+                            <constraint firstItem="kDr-3y-IvH" firstAttribute="width" secondItem="2yr-Jy-T8M" secondAttribute="width" id="nKV-a9-3lq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mYs-zH-95Z" secondAttribute="trailing" id="oOd-2M-xTQ"/>
+                            <constraint firstItem="kDr-3y-IvH" firstAttribute="height" secondItem="mYs-zH-95Z" secondAttribute="height" id="sVO-eu-TvU"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-748" y="-81"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hdC-q5-kqU">
+            <objects>
+                <viewController id="xY2-ic-nuX" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gwr-Mo-5fj"/>
+                        <viewControllerLayoutGuide type="bottom" id="wla-0C-r3X"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2Uu-g6-Klh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4BN-Z2-3KU" userLabel="뷰 A">
+                                <rect key="frame" x="16" y="42" width="161" height="278.5"/>
+                                <color key="backgroundColor" red="0.2188855438" green="0.27012880049999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="caN-aZ-ykG" userLabel="뷰 B">
+                                <rect key="frame" x="198" y="42" width="161" height="278.5"/>
+                                <color key="backgroundColor" red="1" green="0.28616071609999999" blue="0.71023679409999996" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Lv-xw-pNf" userLabel="뷰 C">
+                                <rect key="frame" x="16" y="341" width="343" height="278.5"/>
+                                <color key="backgroundColor" red="0.59765974150000001" green="0.95316590310000004" blue="0.42677536290000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4BN-Z2-3KU" firstAttribute="top" secondItem="gwr-Mo-5fj" secondAttribute="bottom" constant="22" id="04F-cw-Kaw"/>
+                            <constraint firstItem="caN-aZ-ykG" firstAttribute="leading" secondItem="4BN-Z2-3KU" secondAttribute="trailing" constant="21" id="1aj-gU-n6z"/>
+                            <constraint firstItem="caN-aZ-ykG" firstAttribute="width" secondItem="4BN-Z2-3KU" secondAttribute="width" id="2SG-7O-fms"/>
+                            <constraint firstItem="2Lv-xw-pNf" firstAttribute="top" secondItem="caN-aZ-ykG" secondAttribute="bottom" constant="20.5" id="4vd-fR-Tgr"/>
+                            <constraint firstItem="caN-aZ-ykG" firstAttribute="height" secondItem="4BN-Z2-3KU" secondAttribute="height" id="6ec-HP-KTO"/>
+                            <constraint firstItem="4BN-Z2-3KU" firstAttribute="leading" secondItem="2Uu-g6-Klh" secondAttribute="leadingMargin" id="9Yh-m1-TEA"/>
+                            <constraint firstItem="wla-0C-r3X" firstAttribute="top" secondItem="2Lv-xw-pNf" secondAttribute="bottom" constant="47.5" id="DwP-kU-CnX"/>
+                            <constraint firstItem="caN-aZ-ykG" firstAttribute="top" secondItem="gwr-Mo-5fj" secondAttribute="bottom" constant="22" id="NLl-GO-PSc"/>
+                            <constraint firstItem="2Lv-xw-pNf" firstAttribute="height" secondItem="4BN-Z2-3KU" secondAttribute="height" id="Twf-Vx-8FN"/>
+                            <constraint firstItem="2Lv-xw-pNf" firstAttribute="trailing" secondItem="2Uu-g6-Klh" secondAttribute="trailingMargin" id="Ym3-hX-nzq"/>
+                            <constraint firstItem="2Lv-xw-pNf" firstAttribute="leading" secondItem="2Uu-g6-Klh" secondAttribute="leadingMargin" id="mUr-So-nOp"/>
+                            <constraint firstItem="caN-aZ-ykG" firstAttribute="trailing" secondItem="2Uu-g6-Klh" secondAttribute="trailingMargin" id="zhI-Ly-7XN"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eAk-th-hYO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="41" y="-81"/>
+        </scene>
+    </scenes>
+</document>

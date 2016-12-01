@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="EEA-sE-qT4">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--영화정보-->
+        <scene sceneID="gcK-7R-OYj">
+            <objects>
+                <tableViewController id="eru-wj-nYD" customClass="ListViewController" customModule="MyMovieChart" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" id="KUk-oO-BfR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="VAs-OF-oF0">
+                            <rect key="frame" x="0.0" y="172" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0H1-d7-0cZ">
+                                    <rect key="frame" x="151.5" y="7" width="72" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="72" id="hm2-nS-ACl"/>
+                                    </constraints>
+                                    <state key="normal" title="더보기"/>
+                                    <connections>
+                                        <action selector="more:" destination="eru-wj-nYD" eventType="touchUpInside" id="W8x-1E-hBA"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="0H1-d7-0cZ" secondAttribute="bottom" constant="7" id="Y5a-Bp-rIo"/>
+                                <constraint firstItem="0H1-d7-0cZ" firstAttribute="centerX" secondItem="VAs-OF-oF0" secondAttribute="centerX" id="zpU-xA-3mS"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ListCell" rowHeight="80" id="y66-Qd-ZT0" customClass="MovieCell" customModule="MyMovieChart" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="y66-Qd-ZT0" id="Pvj-Hh-ccT">
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="80"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="영화 제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Tf-S7-JGG">
+                                            <rect key="frame" x="70" y="13" width="180" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="G4z-2x-IaN"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="영화에 대한 내용 설명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vc1-wn-Opb">
+                                            <rect key="frame" x="70" y="43" width="214" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="8uY-8f-cUO"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="103" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="개봉일" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCZ-rX-tOK">
+                                            <rect key="frame" x="262" y="11" width="80" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="평점" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mTL-D2-S9P">
+                                            <rect key="frame" x="302" y="-36" width="40" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="40" id="b6y-Xu-HwF"/>
+                                                <constraint firstAttribute="height" constant="21" id="i3x-46-J8q"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XTv-W4-Zdq">
+                                            <rect key="frame" x="8" y="5" width="55" height="68"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="mTL-D2-S9P" firstAttribute="leading" secondItem="Vc1-wn-Opb" secondAttribute="trailing" constant="18" id="HOq-ak-aOj"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Vc1-wn-Opb" secondAttribute="bottom" constant="7" id="WBo-Io-V2l"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="8Tf-S7-JGG" secondAttribute="trailing" constant="84" id="XrE-aT-D3W"/>
+                                        <constraint firstItem="8Tf-S7-JGG" firstAttribute="leading" secondItem="Pvj-Hh-ccT" secondAttribute="leadingMargin" constant="62" id="fu0-lN-wUB"/>
+                                        <constraint firstItem="Vc1-wn-Opb" firstAttribute="leading" secondItem="Pvj-Hh-ccT" secondAttribute="leadingMargin" constant="62" id="oqb-mP-cyd"/>
+                                        <constraint firstItem="Vc1-wn-Opb" firstAttribute="top" secondItem="8Tf-S7-JGG" secondAttribute="bottom" constant="9" id="qkO-zx-ONj"/>
+                                        <constraint firstItem="8Tf-S7-JGG" firstAttribute="top" secondItem="Pvj-Hh-ccT" secondAttribute="topMargin" constant="5" id="rKX-qO-goB"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="mTL-D2-S9P" secondAttribute="bottom" constant="7" id="vq7-8G-rA5"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="mTL-D2-S9P" secondAttribute="trailing" constant="33" id="lGx-Zg-kA8"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="desc" destination="Vc1-wn-Opb" id="cns-h6-jTH"/>
+                                    <outlet property="opendate" destination="aCZ-rX-tOK" id="9Wa-yS-FuB"/>
+                                    <outlet property="rating" destination="mTL-D2-S9P" id="mLK-zL-VfG"/>
+                                    <outlet property="thumbnail" destination="XTv-W4-Zdq" id="H0F-xx-6kM"/>
+                                    <outlet property="title" destination="8Tf-S7-JGG" id="fXa-xh-ozL"/>
+                                    <segue destination="aXq-uV-rOU" kind="show" identifier="segue_detail" id="cGA-lB-IBc"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="eru-wj-nYD" id="gsL-E8-EeK"/>
+                            <outlet property="delegate" destination="eru-wj-nYD" id="v8u-D2-5ls"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="영화정보" id="SMO-eI-sbC"/>
+                    <connections>
+                        <outlet property="moreBtn" destination="0H1-d7-0cZ" id="k1r-cC-TxD"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2BG-9w-dcW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-309.60000000000002" y="-2058.6206896551726"/>
+        </scene>
+        <!--영화관 정보-->
+        <scene sceneID="dhl-aC-Vsd">
+            <objects>
+                <tableViewController id="m9h-kS-mJY" customClass="TheaterListController" customModule="MyMovieChart" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="56" sectionHeaderHeight="28" sectionFooterHeight="28" id="oUb-N8-J87">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="jKf-po-3LM">
+                            <rect key="frame" x="0.0" y="148" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H63-nf-3YZ">
+                                    <rect key="frame" x="168" y="7" width="39" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="더보기"/>
+                                    <connections>
+                                        <action selector="more:" destination="m9h-kS-mJY" eventType="touchUpInside" id="8dR-l1-ftG"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="tCell" rowHeight="56" id="lCS-8r-SCC" customClass="TheaterCell" customModule="MyMovieChart" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="56"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lCS-8r-SCC" id="BDk-Ye-hGP">
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="56"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="상영관명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wsr-Ar-Mho">
+                                            <rect key="frame" x="17" y="0.0" width="175" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="주소" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CP2-fK-joA">
+                                            <rect key="frame" x="17" y="28" width="317" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="연락처" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLy-5A-bYA">
+                                            <rect key="frame" x="245" y="0.0" width="97" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="97" id="Pf6-xp-J7Q"/>
+                                                <constraint firstAttribute="height" constant="21" id="WZb-ey-ttd"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="oLy-5A-bYA" firstAttribute="top" secondItem="BDk-Ye-hGP" secondAttribute="top" id="GLA-Dd-dPO"/>
+                                        <constraint firstAttribute="trailing" secondItem="oLy-5A-bYA" secondAttribute="trailing" id="gDQ-iN-BX3"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="addr" destination="CP2-fK-joA" id="q7S-8K-89s"/>
+                                    <outlet property="name" destination="Wsr-Ar-Mho" id="t07-h3-5re"/>
+                                    <outlet property="tel" destination="oLy-5A-bYA" id="dhv-c6-5WH"/>
+                                    <segue destination="4ot-0l-TMK" kind="show" identifier="segue_map" id="nvD-Gi-nPd"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="m9h-kS-mJY" id="hjU-dq-i4Z"/>
+                            <outlet property="delegate" destination="m9h-kS-mJY" id="sNK-S8-EZ9"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="영화관 정보" id="d6e-Ag-M7c"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1B7-Oi-LbZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-311.19999999999999" y="-1334.4827586206898"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="cb6-Zm-1uk">
+            <objects>
+                <viewController id="4ot-0l-TMK" customClass="TheaterViewController" customModule="MyMovieChart" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iu7-g9-ktj"/>
+                        <viewControllerLayoutGuide type="bottom" id="dIv-X0-1qG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aYI-e9-QMu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="F8F-eW-TB1">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="Pob-PA-mhe"/>
+                    <connections>
+                        <outlet property="map" destination="F8F-eW-TB1" id="gGW-M5-ewq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4NL-73-rra" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="524" y="-1334.4827586206898"/>
+        </scene>
+        <!--영화관 목록-->
+        <scene sceneID="DA3-DW-rNM">
+            <objects>
+                <navigationController id="9ex-Nc-9gI" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="영화관 목록" image="Listbullets.png" id="25t-la-Lvb"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6IY-WN-K1e">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="m9h-kS-mJY" kind="relationship" relationship="rootViewController" id="vOk-3W-cGf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tnY-5f-JSN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1087" y="-1334"/>
+        </scene>
+        <!--영화 제목-->
+        <scene sceneID="vdW-NC-7k3">
+            <objects>
+                <viewController id="aXq-uV-rOU" customClass="DetailViewController" customModule="MyMovieChart" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ej9-Fv-hAF"/>
+                        <viewControllerLayoutGuide type="bottom" id="2wk-g0-JpA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="anH-XJ-cZL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JZL-xF-NSb">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.9170279777" green="0.9170279777" blue="0.9170279777" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.9170279777" green="0.9170279777" blue="0.9170279777" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Xfu-T2-bUt">
+                                <rect key="frame" x="169" y="222" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="0.13757855790000001" green="0.14991001309999999" blue="0.1115910152" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="JZL-xF-NSb" secondAttribute="trailing" id="EUn-I7-nlM"/>
+                            <constraint firstItem="JZL-xF-NSb" firstAttribute="leading" secondItem="anH-XJ-cZL" secondAttribute="leading" id="Jew-Ge-Y4c"/>
+                            <constraint firstAttribute="bottom" secondItem="JZL-xF-NSb" secondAttribute="bottom" id="kPp-re-qI6"/>
+                            <constraint firstItem="JZL-xF-NSb" firstAttribute="top" secondItem="anH-XJ-cZL" secondAttribute="top" id="zGV-oq-NBe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="영화 제목" id="4U2-bX-FSc"/>
+                    <connections>
+                        <outlet property="spinner" destination="Xfu-T2-bUt" id="6sx-ea-nzr"/>
+                        <outlet property="wv" destination="JZL-xF-NSb" id="eVO-B1-zjG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AdR-bv-Ynx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="524" y="-2057.7211394302849"/>
+        </scene>
+        <!--영화차트-->
+        <scene sceneID="gkv-Ro-unR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="I2F-Hk-R5M" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="영화차트" image="Trailer.png" id="X8p-ov-m4B"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fQ6-IT-03p">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="eru-wj-nYD" kind="relationship" relationship="rootViewController" id="fSi-i0-nSW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WBf-CU-55a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1087.2" y="-2057.7211394302849"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="wRG-yQ-ruN">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="EEA-sE-qT4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="q31-gK-16d">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="I2F-Hk-R5M" kind="relationship" relationship="viewControllers" id="um3-Na-aou"/>
+                        <segue destination="9ex-Nc-9gI" kind="relationship" relationship="viewControllers" id="YhI-Zo-sOX"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="81W-VN-FMx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2026.4000000000001" y="-2057.7211394302849"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Listbullets.png" width="30" height="30"/>
+        <image name="Trailer.png" width="30" height="30"/>
+    </resources>
+</document>
