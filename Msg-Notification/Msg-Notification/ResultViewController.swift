@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ResultViewController : UIViewController {
+class ResultViewController: UIViewController {
     
 }
 
