@@ -6,7 +6,7 @@ class ViewController: UIViewController {
     @IBOutlet var msg: UITextField!
     @IBOutlet var datepicker: UIDatePicker!
     
-    @IBAction func save(_ sender: AnyObject) {
+    @IBAction func save(_ sender: Any) {
         
         // 알림 설정 내용을 확인
         let setting = UIApplication.shared.currentUserNotificationSettings
@@ -48,7 +48,9 @@ class ViewController: UIViewController {
                 
                 alert.addAction(ok)
                 
-                self.present(alert, animated: false)
+                OperationQueue.main.addOperation {
+                    self.present(alert, animated: false)
+                }
             }            
         } else {
             let noti = UILocalNotification()
